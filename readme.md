@@ -29,12 +29,18 @@ docker rm 988e27da7bdf
 docker rm -f 988e27da7bdf
 ```
 
-####Config notes:
+#### Config notes:
 
-*Make working directories:*
-mkdir /usr/local/apache2/htdocs /usr/share/nginx/html
+**Make working directories:**
+mkdir /usr/local/apache2/htdocs /usr/share/nginx/html /var/www/html
 
 **mariadb_phpmyadmin:**
-mysql: mysql -h localhost -P 3306 --protocol=tcp -u root -p
-phpmyadmin: http://localhost:8765/
 
+db access: 
+- console: mysql -h localhost -P 3306 --protocol=tcp -u root -p
+- phpmyadmin: http://localhost:8765/
+- phpPDO: host=mariadb
+
+**php_apache_nginx:**
+
+If the project has `public` folder (Laravel, ZF, ...), set `DocumentRoot "/var/www/html/public"` in `./httpd/httpd.conf`
