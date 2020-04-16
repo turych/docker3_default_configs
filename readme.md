@@ -43,4 +43,4 @@ db access:
 
 **php_apache_nginx:**
 
-If the project has `public` folder (Laravel, ZF, ...), set `DocumentRoot "/var/www/html/public"` in `./httpd/httpd.conf`
+If the project has `public` folder (Laravel, ZF, ...), set `DocumentRoot "/var/www/html/public"` in `./httpd/httpd.conf` and `httpd { server { location { root /var/www/html/public` in `./nginx/nginx.conf`
