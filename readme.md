@@ -1,7 +1,3 @@
-**Make working directories:**
-mkdir /usr/local/apache2/htdocs /usr/share/nginx/html
-
-
 **docker commands:**
 - run project:
 ```bash
@@ -20,13 +16,18 @@ CONTAINER ID        IMAGE       ...
 
 - stop and remove container:
 ```bash
-docker stop 988e27da7bdf
-docker rm 988e27da7bdf
+docker stop container_ID
+docker rm container_ID
 ```
 
 - remove:
 ```bash
-docker rm -f 988e27da7bdf
+docker rm -f container_ID
+```
+
+- logs:
+```bash
+docker logs -f --details container_ID
 ```
 
 #### Config notes:

@@ -3,7 +3,7 @@ version: '3'
 services:
   mariadb:
     image: mariadb:10.3
-    restart: always
+    restart: "no"
     volumes:
       - ./mariadb:/var/lib/mysql
     environment:
